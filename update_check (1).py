@@ -455,7 +455,7 @@ def called_final(sur_loc,file1):
                     case+='Z'
                     #print(case)
                     sound(case)
-                    plot(sur_loc,span_loc,str(i))
+                    # plot(sur_loc,span_loc,str(i))
                 except:
                     logs+="Not able to call common_area funtion. Terminated comparison for "+str(i)+". Report Format error."
                 logs+="\n--------------------------------------------------------------------------------------\n"
@@ -489,7 +489,7 @@ def called_mb(file1):
             case+='Z'
             #print(case)
             sound(case)
-            plot("sur_loc",span_loc,j[:-5])
+            # plot("sur_loc",span_loc,j[:-5])
 #             except:
 #                 logs+="Not able to call common_area funtion. Terminated comparison for "+j+". Report Format error."
             logs+="\n--------------------------------------------------------------------------------------\n"
