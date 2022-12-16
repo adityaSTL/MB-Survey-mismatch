@@ -56,6 +56,14 @@ class Extract:
         
         if len(hdd)==0:
             try:
+                hdd=pd.read_excel(path,sheet_name='HDD MB')
+                hdd.dropna(how='all', inplace=True,axis=0)
+                hdd.dropna(how='all', inplace=True,axis=1)
+            except:
+                print('No file HDD MB')
+
+        if len(hdd)==0:
+            try:
                 hdd=pd.read_excel(path,sheet_name='HDD')
                 hdd.dropna(how='all', inplace=True,axis=0)
                 hdd.dropna(how='all', inplace=True,axis=1)

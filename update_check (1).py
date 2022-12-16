@@ -3,10 +3,6 @@
 
 # In[1]:
 
-from docx import Document
-from docx.shared import Inches
-
-
 
 #Importing all the libraries
 from tkinter import *
@@ -34,16 +30,6 @@ from summary_calc import summarycalc
 
 
 # In[2]:
-
-
-# document = Document()
-
-# p = document.add_paragraph()
-# r = p.add_run()
-#r.add_text('Good Morning every body,This is my ')
-#r.add_picture('/tmp/foo.jpg')
-#r.add_text(' do you like it?')
-
 
 
 def survey_data(survey_loc,spanid):
@@ -276,13 +262,8 @@ def plot(sur_loc,mb_loc,spanid):
     plt.title(spanid)
     fig1 = plt.gcf()
     plt.draw()
-    # plt.show()
-    fig_name=r"C:\Users\Aditya.gupta\Downloads\testing - 1\\"+str(spanid)
-    #fig_name=spanid
-    fig1.savefig(fig_name, dpi=300)
-    full_name=fig_name+".png"  
-    # r.add_picture(full_name)  
-    # "C:\Users\Aditya.gupta\Downloads\testing - 1\WRG-REG-5699-M-01-GR01-07.png"
+    plt.show()
+    #fig1.savefig('hivro.png', dpi=300)    
 
     # hdd.shape
 
@@ -294,34 +275,34 @@ def counter(c,start,end):
     global logs
     count=end-start+1
     if c=='a' and count>10:
-        logs+="Case-A: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-A: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start )
     elif c=='b' and count>10:
-        logs+="Case-B: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-B: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start )
         
     elif c=='c' and count>10:
-        logs+="Case-C: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-C: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start )
         
     elif c=='d' and count>10:
-        logs+="Case-D: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-D: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start )   
         
     elif c=='e' and count>10:
-        logs+="Case-E: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-E: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start )   
        
     elif c=='f' and count>10:
-        logs+="Case-F: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-F: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start )
         
     elif c=='g' and count>10:
-        logs+="Case-G: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-G: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start ) 
         
     elif c=='h' and count>10:
-        logs+="Case-H: Error in chainage from "+str(start)+" to "+str(end)+".\n"
+        logs+="Case-H: Error in chainge from "+str(start)+" to "+str(end)+".\n"
 #         print("count>=4 is ", count,start ) 
         
     else:
@@ -548,7 +529,7 @@ def boq_checkup():
     logs= logs + "Work in BoQ Checkup function done. Closed! "  + "\n"
 
 
-# In[ ]:
+# In[19]:
 
 
 global errors,threshold1,threshold2,logs,temp_logs,temp_logs2
@@ -601,7 +582,6 @@ def called_A():
 #     try:
     temp_logs+=called_final(file_format,file_mandal)    
     text_box.insert('end', temp_logs)
-    # r.add_text(temp_logs)
 #     except:
 #         temp_logs+="\nNot able to run fully. Report error."
 #         text_box.insert('end', temp_logs)
@@ -628,8 +608,6 @@ def called_B():
 #     try:
     temp_logs2+=str(called_mb(file_mandal))    
     text_box.insert('end', temp_logs2)
-    # r.add_text(temp_logs2)
-
 #     except:
 #         temp_logs+="\nNot able to run fully. Report error."
 #         text_box.insert('end', temp_logs)
@@ -640,7 +618,6 @@ def called_B():
 
 #     popupRoot.destroy()
 def called_C():
-    # document.save('Final_MB_Report.docx')
     popupRoot.destroy()
 
 
@@ -658,14 +635,13 @@ popupButton = Button(popupRoot, text = 'C', bg='#00FF00',font = ("Times New Roma
 popupButton = Button(popupRoot, text = 'X', bg='#f70d1a',font = ("Times New Roman", 12), command = called_C,width = 3).grid(row=5,column=3)
 
 popupRoot.geometry('390x200')
-
 mainloop()
 
 
-# In[ ]:
+# In[18]:
 
 
-
+errors
 
 
 # In[ ]:
